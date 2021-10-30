@@ -20,11 +20,12 @@ public class MainTest {
     assert Objects.equals(Main.checkNumb(10), "Buzz") : "Ошибка если кратно 5";
     assert Objects.equals(Main.checkNumb(6), "Fizz") : "Ошибка если кратно 5";
     assert Objects.equals(Main.checkNumb(15), "FizzBuzz") : "Ошибка если кратно 3 и 5";
+
     }
 
     @Test
     public void exeptionTest() throws IOException {
-
+//ловим ошибку если обращаемся к несуществующему файлу
         try {
             BufferedReader br = new BufferedReader(new FileReader("nums2.txt"));
             Assertions.fail("Expected IOException");
