@@ -32,6 +32,12 @@ public class MainTest {
         } catch (IOException thrown) {
             Assertions.assertNotEquals("", thrown.getMessage());
         }
+    }
 
+//Проверяем корректность проверки на то что число
+    @Test
+    public void isDigitTest() {
+        Assertions.assertTrue(Main.isDigit("2"));
+        Assertions.assertFalse(Main.isDigit("f"));
     }
 }
